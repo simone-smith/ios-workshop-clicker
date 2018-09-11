@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 0
+
+    @IBOutlet weak var counterLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        counter += 1
+        counterLabel.text = "\(counter)"
+    }
 }
 
